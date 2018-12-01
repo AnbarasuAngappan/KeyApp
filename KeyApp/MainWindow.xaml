@@ -1,0 +1,49 @@
+﻿<Window x:Class="KeyApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:KeyApp"
+        mc:Ignorable="d"
+        Title="Nuclyo Reader(API)" Height="239.301" Width="450.106" WindowStyle="ToolWindow" WindowStartupLocation="CenterOwner" WindowState="Normal" 
+        ResizeMode="CanResizeWithGrip" SizeChanged="Window_SizeChanged" MinWidth="449" MinHeight="239" MaxHeight="240" MaxWidth="451" 
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="166*" />
+            <RowDefinition Height="50*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <!--<ColumnDefinition Width="120"></ColumnDefinition>-->
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <!--<ColumnDefinition Width="265" />-->
+        </Grid.ColumnDefinitions>       
+
+        <GroupBox FontWeight="DemiBold" Header="Nuclyo DataCollector" Grid.Column="0" Grid.Row="0" Background="WhiteSmoke">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid Grid.Column="0">
+                    <Label Content="Society ID :" HorizontalAlignment="Left" Margin="50,25,0,0" VerticalAlignment="Top"/>
+                    <Label Content="API Key :" HorizontalAlignment="Left" Margin="63,66,0,0" VerticalAlignment="Top"/>
+                </Grid>
+                <Grid Grid.Column="1">
+                    <TextBox Name="txtSocietyID" HorizontalAlignment="Left" Height="23" Margin="10,27,0,0" TextWrapping="Wrap"  Text="" VerticalAlignment="Top" Width="290"/>
+                    <TextBox Name="txtAPIKey" HorizontalAlignment="Left" Height="23" Margin="10,68,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="290"/>
+
+                </Grid>               
+            </Grid>
+        </GroupBox>
+        <GroupBox FontWeight="DemiBold" Grid.Row="1" Background="WhiteSmoke">
+            <Grid>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" Margin="0,10,20,0">
+                    <Button Name="btnSubmit" Content="Submit" HorizontalAlignment="Left" Height="20.808"  VerticalAlignment="Top" Width="67.005" Click="btnSubmit_Click" Margin="0"/>
+                    <Button Name="btnClose" Content="Close" HorizontalAlignment="Left" Height="20.808"  VerticalAlignment="Top" Width="67.005" Click="btnClose_Click" Margin="20,0,0,0"/>
+                </StackPanel>
+            </Grid>
+        </GroupBox>       
+    </Grid>
+</Window>
